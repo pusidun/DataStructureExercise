@@ -103,3 +103,10 @@ int Vector<T>::remove(Rank lo,Rank hi)
 	return hi-lo;
 }
 
+template<typename T>
+T Vector<T>::remove(Rank r)
+{
+	T e=_elem[r];
+	remove(r,r+1);
+	return e;
+}
